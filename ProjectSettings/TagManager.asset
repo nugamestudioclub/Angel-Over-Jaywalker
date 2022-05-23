@@ -11,10 +11,10 @@ TagManager:
   - 
   - Water
   - UI
-  - 
-  - 
-  - 
-  - 
+  - Universal
+  - Background
+  - Midground
+  - Foreground
   - 
   - 
   - 
@@ -40,4 +40,10 @@ TagManager:
   m_SortingLayers:
   - name: Default
     uniqueID: 0
+    locked: 0
+  - name: UniversalTile
+    uniqueID: 749929117
+    locked: 0
+  - name: BackgroundTile
+    uniqueID: 633543251
     locked: 0
