@@ -41,9 +41,27 @@ TagManager:
   - name: Default
     uniqueID: 0
     locked: 0
-  - name: UniversalTile
+  - name: BackgroundDynamic
+    uniqueID: 2121823267
+    locked: 0
+  - name: Background_Static
+    uniqueID: 633543251
+    locked: 0
+  - name: Universal_Dynamic
+    uniqueID: 673013727
+    locked: 0
+  - name: Universal_Static
     uniqueID: 749929117
     locked: 0
-  - name: BackgroundTile
-    uniqueID: 633543251
+  - name: Midground_Dynamic
+    uniqueID: 189450829
+    locked: 0
+  - name: Midground_Static
+    uniqueID: 4189140369
+    locked: 0
+  - name: Foreground_Dynamic
+    uniqueID: 4002889123
+    locked: 0
+  - name: Foreground_Static
+    uniqueID: 591059563
     locked: 0
