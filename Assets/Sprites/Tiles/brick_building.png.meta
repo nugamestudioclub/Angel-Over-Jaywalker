@@ -98,6 +98,120 @@ TextureImporter:
   - first:
       213: 5317680725666418979
     second: brick_building_31
+  - first:
+      213: -966146705073536506
+    second: brick_building_32
+  - first:
+      213: 6554118152028599100
+    second: brick_building_33
+  - first:
+      213: 4056933516751940049
+    second: brick_building_34
+  - first:
+      213: -3345918048793597621
+    second: brick_building_35
+  - first:
+      213: -2580394800554898618
+    second: brick_building_36
+  - first:
+      213: 625320001969768548
+    second: brick_building_37
+  - first:
+      213: 6239277722886521827
+    second: brick_building_38
+  - first:
+      213: 527004311032270245
+    second: brick_building_39
+  - first:
+      213: -2774194320048510400
+    second: brick_building_40
+  - first:
+      213: -2169509473535018106
+    second: brick_building_41
+  - first:
+      213: 6538676195289782763
+    second: brick_building_42
+  - first:
+      213: 7456831693551247345
+    second: brick_building_43
+  - first:
+      213: 436863117271388573
+    second: brick_building_44
+  - first:
+      213: -51717930166834673
+    second: brick_building_45
+  - first:
+      213: 8957578404014294446
+    second: brick_building_46
+  - first:
+      213: 2943517961292711916
+    second: brick_building_47
+  - first:
+      213: 2412224648536622564
+    second: brick_building_48
+  - first:
+      213: -2108120113344628362
+    second: brick_building_49
+  - first:
+      213: -4968147353003589563
+    second: brick_building_50
+  - first:
+      213: -4634926995382467286
+    second: brick_building_51
+  - first:
+      213: 8762036859737576300
+    second: brick_building_52
+  - first:
+      213: 9002267379830109116
+    second: brick_building_53
+  - first:
+      213: 192108533816377700
+    second: brick_building_54
+  - first:
+      213: -6076512216768313582
+    second: brick_building_55
+  - first:
+      213: 2724169219126448454
+    second: brick_building_56
+  - first:
+      213: 6760083501041004662
+    second: brick_building_57
+  - first:
+      213: -1191835034755063367
+    second: brick_building_58
+  - first:
+      213: -4251797918451241951
+    second: brick_building_59
+  - first:
+      213: 2416383941721395027
+    second: brick_building_60
+  - first:
+      213: 1846551402186284580
+    second: brick_building_61
+  - first:
+      213: -7292158446963907798
+    second: brick_building_62
+  - first:
+      213: -7937261802542898773
+    second: brick_building_63
+  - first:
+      213: 2213886968837347000
+    second: brick_building_64
+  - first:
+      213: -6995514862966060456
+    second: brick_building_65
+  - first:
+      213: -5400122991045155943
+    second: brick_building_66
+  - first:
+      213: -2508124171369430817
+    second: brick_building_67
+  - first:
+      213: -1280199652390510282
+    second: brick_building_68
+  - first:
+      213: 3410911522639799891
+    second: brick_building_69
   externalObjects: {}
   serializedVersion: 11
   mipmaps:
@@ -239,7 +353,7 @@ TextureImporter:
       rect:
         serializedVersion: 2
         x: 0
-        y: 96
+        y: 192
         width: 32
         height: 32
       alignment: 0
@@ -260,7 +374,7 @@ TextureImporter:
       rect:
         serializedVersion: 2
         x: 32
-        y: 96
+        y: 192
         width: 32
         height: 32
       alignment: 0
@@ -281,7 +395,7 @@ TextureImporter:
       rect:
         serializedVersion: 2
         x: 64
-        y: 96
+        y: 192
         width: 32
         height: 32
       alignment: 0
@@ -302,7 +416,7 @@ TextureImporter:
       rect:
         serializedVersion: 2
         x: 96
-        y: 96
+        y: 192
         width: 32
         height: 32
       alignment: 0
@@ -323,7 +437,7 @@ TextureImporter:
       rect:
         serializedVersion: 2
         x: 128
-        y: 96
+        y: 192
         width: 32
         height: 32
       alignment: 0
@@ -344,7 +458,7 @@ TextureImporter:
       rect:
         serializedVersion: 2
         x: 160
-        y: 96
+        y: 192
         width: 32
         height: 32
       alignment: 0
@@ -365,7 +479,7 @@ TextureImporter:
       rect:
         serializedVersion: 2
         x: 192
-        y: 96
+        y: 192
         width: 32
         height: 32
       alignment: 0
@@ -386,7 +500,7 @@ TextureImporter:
       rect:
         serializedVersion: 2
         x: 224
-        y: 96
+        y: 192
         width: 32
         height: 32
       alignment: 0
@@ -406,8 +520,8 @@ TextureImporter:
       name: brick_building_8
       rect:
         serializedVersion: 2
-        x: 0
-        y: 64
+        x: 256
+        y: 192
         width: 32
         height: 32
       alignment: 0
@@ -427,8 +541,8 @@ TextureImporter:
       name: brick_building_9
       rect:
         serializedVersion: 2
-        x: 32
-        y: 64
+        x: 288
+        y: 192
         width: 32
         height: 32
       alignment: 0
@@ -448,8 +562,8 @@ TextureImporter:
       name: brick_building_10
       rect:
         serializedVersion: 2
-        x: 64
-        y: 64
+        x: 0
+        y: 160
         width: 32
         height: 32
       alignment: 0
@@ -469,8 +583,8 @@ TextureImporter:
       name: brick_building_11
       rect:
         serializedVersion: 2
-        x: 96
-        y: 64
+        x: 32
+        y: 160
         width: 32
         height: 32
       alignment: 0
@@ -490,8 +604,8 @@ TextureImporter:
       name: brick_building_12
       rect:
         serializedVersion: 2
-        x: 128
-        y: 64
+        x: 64
+        y: 160
         width: 32
         height: 32
       alignment: 0
@@ -511,8 +625,8 @@ TextureImporter:
       name: brick_building_13
       rect:
         serializedVersion: 2
-        x: 160
-        y: 64
+        x: 96
+        y: 160
         width: 32
         height: 32
       alignment: 0
@@ -532,8 +646,8 @@ TextureImporter:
       name: brick_building_14
       rect:
         serializedVersion: 2
-        x: 192
-        y: 64
+        x: 128
+        y: 160
         width: 32
         height: 32
       alignment: 0
@@ -553,8 +667,8 @@ TextureImporter:
       name: brick_building_15
       rect:
         serializedVersion: 2
-        x: 224
-        y: 64
+        x: 160
+        y: 160
         width: 32
         height: 32
       alignment: 0
@@ -574,8 +688,8 @@ TextureImporter:
       name: brick_building_16
       rect:
         serializedVersion: 2
-        x: 0
-        y: 32
+        x: 192
+        y: 160
         width: 32
         height: 32
       alignment: 0
@@ -595,8 +709,8 @@ TextureImporter:
       name: brick_building_17
       rect:
         serializedVersion: 2
-        x: 32
-        y: 32
+        x: 224
+        y: 160
         width: 32
         height: 32
       alignment: 0
@@ -616,8 +730,8 @@ TextureImporter:
       name: brick_building_18
       rect:
         serializedVersion: 2
-        x: 64
-        y: 32
+        x: 256
+        y: 160
         width: 32
         height: 32
       alignment: 0
@@ -637,8 +751,8 @@ TextureImporter:
       name: brick_building_19
       rect:
         serializedVersion: 2
-        x: 96
-        y: 32
+        x: 288
+        y: 160
         width: 32
         height: 32
       alignment: 0
@@ -658,8 +772,8 @@ TextureImporter:
       name: brick_building_20
       rect:
         serializedVersion: 2
-        x: 128
-        y: 32
+        x: 0
+        y: 128
         width: 32
         height: 32
       alignment: 0
@@ -679,8 +793,8 @@ TextureImporter:
       name: brick_building_21
       rect:
         serializedVersion: 2
-        x: 160
-        y: 32
+        x: 32
+        y: 128
         width: 32
         height: 32
       alignment: 0
@@ -700,8 +814,8 @@ TextureImporter:
       name: brick_building_22
       rect:
         serializedVersion: 2
-        x: 192
-        y: 32
+        x: 64
+        y: 128
         width: 32
         height: 32
       alignment: 0
@@ -721,8 +835,8 @@ TextureImporter:
       name: brick_building_23
       rect:
         serializedVersion: 2
-        x: 224
-        y: 32
+        x: 96
+        y: 128
         width: 32
         height: 32
       alignment: 0
@@ -742,8 +856,8 @@ TextureImporter:
       name: brick_building_24
       rect:
         serializedVersion: 2
-        x: 0
-        y: 0
+        x: 128
+        y: 128
         width: 32
         height: 32
       alignment: 0
@@ -763,8 +877,8 @@ TextureImporter:
       name: brick_building_25
       rect:
         serializedVersion: 2
-        x: 32
-        y: 0
+        x: 160
+        y: 128
         width: 32
         height: 32
       alignment: 0
@@ -784,8 +898,8 @@ TextureImporter:
       name: brick_building_26
       rect:
         serializedVersion: 2
-        x: 64
-        y: 0
+        x: 192
+        y: 128
         width: 32
         height: 32
       alignment: 0
@@ -805,8 +919,8 @@ TextureImporter:
       name: brick_building_27
       rect:
         serializedVersion: 2
-        x: 96
-        y: 0
+        x: 224
+        y: 128
         width: 32
         height: 32
       alignment: 0
@@ -826,8 +940,8 @@ TextureImporter:
       name: brick_building_28
       rect:
         serializedVersion: 2
-        x: 128
-        y: 0
+        x: 256
+        y: 128
         width: 32
         height: 32
       alignment: 0
@@ -847,8 +961,8 @@ TextureImporter:
       name: brick_building_29
       rect:
         serializedVersion: 2
-        x: 160
-        y: 0
+        x: 288
+        y: 128
         width: 32
         height: 32
       alignment: 0
@@ -868,8 +982,8 @@ TextureImporter:
       name: brick_building_30
       rect:
         serializedVersion: 2
-        x: 192
-        y: 0
+        x: 0
+        y: 96
         width: 32
         height: 32
       alignment: 0
@@ -889,8 +1003,8 @@ TextureImporter:
       name: brick_building_31
       rect:
         serializedVersion: 2
-        x: 224
-        y: 0
+        x: 32
+        y: 96
         width: 32
         height: 32
       alignment: 0
@@ -902,6 +1016,804 @@ TextureImporter:
       bones: []
       spriteID: 321d94a12723cc940800000000000000
       internalID: 5317680725666418979
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: brick_building_32
+      rect:
+        serializedVersion: 2
+        x: 64
+        y: 96
+        width: 32
+        height: 32
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 6028d2bc0be8792f0800000000000000
+      internalID: -966146705073536506
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: brick_building_33
+      rect:
+        serializedVersion: 2
+        x: 96
+        y: 96
+        width: 32
+        height: 32
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: c33ba9bebb7e4fa50800000000000000
+      internalID: 6554118152028599100
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: brick_building_34
+      rect:
+        serializedVersion: 2
+        x: 128
+        y: 96
+        width: 32
+        height: 32
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 1d92067f98f1d4830800000000000000
+      internalID: 4056933516751940049
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: brick_building_35
+      rect:
+        serializedVersion: 2
+        x: 160
+        y: 96
+        width: 32
+        height: 32
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: b49e6161349e091d0800000000000000
+      internalID: -3345918048793597621
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: brick_building_36
+      rect:
+        serializedVersion: 2
+        x: 192
+        y: 96
+        width: 32
+        height: 32
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 64b09a4b998903cd0800000000000000
+      internalID: -2580394800554898618
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: brick_building_37
+      rect:
+        serializedVersion: 2
+        x: 224
+        y: 96
+        width: 32
+        height: 32
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 468ca5c8a359da800800000000000000
+      internalID: 625320001969768548
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: brick_building_38
+      rect:
+        serializedVersion: 2
+        x: 256
+        y: 96
+        width: 32
+        height: 32
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 3e3c8a7280e569650800000000000000
+      internalID: 6239277722886521827
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: brick_building_39
+      rect:
+        serializedVersion: 2
+        x: 288
+        y: 96
+        width: 32
+        height: 32
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 5ad8d22f0ab405700800000000000000
+      internalID: 527004311032270245
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: brick_building_40
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 64
+        width: 32
+        height: 32
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 04a2a97d6f41089d0800000000000000
+      internalID: -2774194320048510400
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: brick_building_41
+      rect:
+        serializedVersion: 2
+        x: 32
+        y: 64
+        width: 32
+        height: 32
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 68bb91dd0aa54e1e0800000000000000
+      internalID: -2169509473535018106
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: brick_building_42
+      rect:
+        serializedVersion: 2
+        x: 64
+        y: 64
+        width: 32
+        height: 32
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: be9dc813b5b0eba50800000000000000
+      internalID: 6538676195289782763
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: brick_building_43
+      rect:
+        serializedVersion: 2
+        x: 96
+        y: 64
+        width: 32
+        height: 32
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 1ff1ff3daecfb7760800000000000000
+      internalID: 7456831693551247345
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: brick_building_44
+      rect:
+        serializedVersion: 2
+        x: 128
+        y: 64
+        width: 32
+        height: 32
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: d915e68c0bc001600800000000000000
+      internalID: 436863117271388573
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: brick_building_45
+      rect:
+        serializedVersion: 2
+        x: 160
+        y: 64
+        width: 32
+        height: 32
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: f0a23e701d2484ff0800000000000000
+      internalID: -51717930166834673
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: brick_building_46
+      rect:
+        serializedVersion: 2
+        x: 192
+        y: 64
+        width: 32
+        height: 32
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: ea58bf26916bf4c70800000000000000
+      internalID: 8957578404014294446
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: brick_building_47
+      rect:
+        serializedVersion: 2
+        x: 224
+        y: 64
+        width: 32
+        height: 32
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: ce785d88df979d820800000000000000
+      internalID: 2943517961292711916
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: brick_building_48
+      rect:
+        serializedVersion: 2
+        x: 256
+        y: 64
+        width: 32
+        height: 32
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 4e5877e8981f97120800000000000000
+      internalID: 2412224648536622564
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: brick_building_49
+      rect:
+        serializedVersion: 2
+        x: 288
+        y: 64
+        width: 32
+        height: 32
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 679bc3c1de37eb2e0800000000000000
+      internalID: -2108120113344628362
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: brick_building_50
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 32
+        width: 32
+        height: 32
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 5408c680e489d0bb0800000000000000
+      internalID: -4968147353003589563
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: brick_building_51
+      rect:
+        serializedVersion: 2
+        x: 32
+        y: 32
+        width: 32
+        height: 32
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: a250c50647e6dafb0800000000000000
+      internalID: -4634926995382467286
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: brick_building_52
+      rect:
+        serializedVersion: 2
+        x: 64
+        y: 32
+        width: 32
+        height: 32
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: c639985c912099970800000000000000
+      internalID: 8762036859737576300
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: brick_building_53
+      rect:
+        serializedVersion: 2
+        x: 96
+        y: 32
+        width: 32
+        height: 32
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: cb33cd36c7a7eec70800000000000000
+      internalID: 9002267379830109116
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: brick_building_54
+      rect:
+        serializedVersion: 2
+        x: 128
+        y: 32
+        width: 32
+        height: 32
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 461427491b18aa200800000000000000
+      internalID: 192108533816377700
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: brick_building_55
+      rect:
+        serializedVersion: 2
+        x: 160
+        y: 32
+        width: 32
+        height: 32
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 21704366554ebaba0800000000000000
+      internalID: -6076512216768313582
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: brick_building_56
+      rect:
+        serializedVersion: 2
+        x: 192
+        y: 32
+        width: 32
+        height: 32
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 641d516b8713ec520800000000000000
+      internalID: 2724169219126448454
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: brick_building_57
+      rect:
+        serializedVersion: 2
+        x: 224
+        y: 32
+        width: 32
+        height: 32
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 6703783b024a0dd50800000000000000
+      internalID: 6760083501041004662
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: brick_building_58
+      rect:
+        serializedVersion: 2
+        x: 256
+        y: 32
+        width: 32
+        height: 32
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 9b12f8ab950c57fe0800000000000000
+      internalID: -1191835034755063367
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: brick_building_59
+      rect:
+        serializedVersion: 2
+        x: 288
+        y: 32
+        width: 32
+        height: 32
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 12ce7f5f1549ef4c0800000000000000
+      internalID: -4251797918451241951
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: brick_building_60
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 0
+        width: 32
+        height: 32
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 35f03477468b88120800000000000000
+      internalID: 2416383941721395027
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: brick_building_61
+      rect:
+        serializedVersion: 2
+        x: 32
+        y: 0
+        width: 32
+        height: 32
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 42e10d287b440a910800000000000000
+      internalID: 1846551402186284580
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: brick_building_62
+      rect:
+        serializedVersion: 2
+        x: 64
+        y: 0
+        width: 32
+        height: 32
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: a232ada278c0dca90800000000000000
+      internalID: -7292158446963907798
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: brick_building_63
+      rect:
+        serializedVersion: 2
+        x: 96
+        y: 0
+        width: 32
+        height: 32
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: ba1672aa17e29d190800000000000000
+      internalID: -7937261802542898773
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: brick_building_64
+      rect:
+        serializedVersion: 2
+        x: 128
+        y: 0
+        width: 32
+        height: 32
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 8b69a6ee77e49be10800000000000000
+      internalID: 2213886968837347000
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: brick_building_65
+      rect:
+        serializedVersion: 2
+        x: 160
+        y: 0
+        width: 32
+        height: 32
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 85a41f3cb40faee90800000000000000
+      internalID: -6995514862966060456
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: brick_building_66
+      rect:
+        serializedVersion: 2
+        x: 192
+        y: 0
+        width: 32
+        height: 32
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 993655f20c8ee05b0800000000000000
+      internalID: -5400122991045155943
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: brick_building_67
+      rect:
+        serializedVersion: 2
+        x: 224
+        y: 0
+        width: 32
+        height: 32
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: fd044f0da5a513dd0800000000000000
+      internalID: -2508124171369430817
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: brick_building_68
+      rect:
+        serializedVersion: 2
+        x: 256
+        y: 0
+        width: 32
+        height: 32
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 6316fade231db3ee0800000000000000
+      internalID: -1280199652390510282
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: brick_building_69
+      rect:
+        serializedVersion: 2
+        x: 288
+        y: 0
+        width: 32
+        height: 32
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 3566b3345fdf55f20800000000000000
+      internalID: 3410911522639799891
       vertices: []
       indices: 
       edges: []

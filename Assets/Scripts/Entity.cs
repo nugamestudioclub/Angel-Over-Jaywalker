@@ -8,6 +8,9 @@ public class Entity : MonoBehaviour {
 
 	private SpriteRenderer spriteRenderer;
 
+	[SerializeField]
+	private Layers.EntityType type;
+
 	[Range(0f, short.MaxValue)]
 	private float moveSpeed = 10.0f;
 
@@ -26,15 +29,13 @@ public class Entity : MonoBehaviour {
 
 	}
 
-	public void Move(Layers.Type layer) {
+	public void Move(Layers.LayerType layer) {
 		gameObject.layer = Layers.ToId(layer);
 		Sort(layer);
 	}
 
-	private void Sort(Layers.Type layer) {
-		Debug.Log($"current sorting layer: {spriteRenderer.sortingLayerID}");
-		Debug.Log($"changing to layer: {Layers.SortingLayerId(layer, Layers.Subtype.Static)}");
-		spriteRenderer.sortingLayerID = Layers.SortingLayerId(layer, Layers.Subtype.Dynamic);
-		Debug.Log($"new sorting layer: {spriteRenderer.sortingLayerID}");
+	private void Sort(Layers.LayerType layer) {
+		spriteRenderer.sortingLayerID = Layers.SortingLayerId(layer);
+		spriteRenderer.sortingOrder = Layers.SortingLayerOrder(type);
 	}
 }

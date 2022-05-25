@@ -1,11 +1,9 @@
 ﻿using System;
 using UnityEngine;
 public static class Layers {
-	private const string DEFAULT = "Default";
-
 	private const int USER_MIN = 6;
 
-	public enum Type {
+	public enum LayerType {
 		Default,
 		Universal,
 		Background,
@@ -13,64 +11,62 @@ public static class Layers {
 		Foreground,
 	}
 
-	public enum Subtype {
-		Static,
-		Dynamic,
+	public enum EntityType {
+		Scenery,
+		Prop,
+		NPC,
+		Player,
 	}
 
-	public static Type FromId(int id) {
+	public static LayerType FromId(int id) {
 		return id < USER_MIN
-			? Type.Default
-			: (Type)(id - USER_MIN + 1);
+			? LayerType.Default
+			: (LayerType)(id - USER_MIN + 1);
 	}
 
-	public static int ToId(Type type) {
-		return type == Type.Default
+	public static int ToId(LayerType layer) {
+		return layer == LayerType.Default
 			? 0
-			: USER_MIN + (int)type - 1;
+			: USER_MIN + (int)layer - 1;
 	}
 
-	public static string NameOf(Type type) {
-		return Enum.GetName(typeof(Type), type);
+	public static string NameOf(LayerType layer) {
+		return Enum.GetName(typeof(LayerType), layer);
 	}
 
-	public static string NameOf(Subtype subtype) {
-		return Enum.GetName(typeof(Subtype), subtype);
+	public static string NameOf(EntityType entity) {
+		return Enum.GetName(typeof(EntityType), entity);
 	}
 
-	public static int LayerId(Type type) {
-		return LayerMask.NameToLayer(NameOf(type));
+	public static int LayerId(LayerType layer) {
+		return LayerMask.NameToLayer(NameOf(layer));
 	}
 
-	public static int SortingLayerId(Type type, Subtype subtype = Subtype.Static) {
-
-		Debug.Log($"given {type} ({(int)type})");
-
-		string name = type == Type.Default
-			? NameOf(type)
-			: NameOf(type) + "_" + NameOf(subtype);
-
-		Debug.Log($"name: {name}");
-		return SortingLayer.NameToID(name);
+	public static int SortingLayerId(LayerType layer) {
+		return SortingLayer.NameToID(NameOf(layer));
 	}
 
-	public static Type UpFrom(Type type) {
-		return type switch {
-			Type.Universal => Type.Universal,
-			Type.Background => Type.Midground,
-			Type.Midground => Type.Foreground,
-			Type.Foreground => Type.Foreground,
-			_ => Type.Default
+	public static int SortingLayerOrder(EntityType entity) {
+		return (int)entity;
+	}
+
+	public static LayerType UpFrom(LayerType layer) {
+		return layer switch {
+			LayerType.Universal => LayerType.Universal,
+			LayerType.Background => LayerType.Midground,
+			LayerType.Midground => LayerType.Foreground,
+			LayerType.Foreground => LayerType.Foreground,
+			_ => LayerType.Default
 		};
 	}
 
-	public static Type DownFrom(Type type) {
-		return type switch {
-			Type.Universal => Type.Universal,
-			Type.Foreground => Type.Midground,
-			Type.Midground => Type.Background,
-			Type.Background => Type.Background,
-			_ => Type.Default
+	public static LayerType DownFrom(LayerType layer) {
+		return layer switch {
+			LayerType.Universal => LayerType.Universal,
+			LayerType.Foreground => LayerType.Midground,
+			LayerType.Midground => LayerType.Background,
+			LayerType.Background => LayerType.Background,
+			_ => LayerType.Default
 		};
 	}
 }
