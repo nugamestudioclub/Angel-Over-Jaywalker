@@ -1,41 +1,34 @@
-﻿using System;
-using UnityEngine;
+﻿using UnityEngine;
 
+[RequireComponent(typeof(BatchRenderer))]
 public class Entity : MonoBehaviour {
-	private Rigidbody2D body;
+	private BatchRenderer entityRenderer;
 
-	private Collider2D myCollider;
+	public Layers.LayerType Layer {
+		get => Layers.FromId(gameObject.layer);
+		private set => gameObject.layer = Layers.ToId(value);
+	}
 
-	private SpriteRenderer spriteRenderer;
+	[field: SerializeField]
+	public Layers.EntityType Type { get; private set; }
 
-	[SerializeField]
-	private Layers.EntityType type;
-
-	[Range(0f, short.MaxValue)]
-	private float moveSpeed = 10.0f;
-
-	void Awake() {
-		body = GetComponent<Rigidbody2D>();
-		myCollider = GetComponent<Collider2D>();
-		spriteRenderer = GetComponent<SpriteRenderer>();
+	protected virtual void Awake() {
+		entityRenderer = GetComponent<BatchRenderer>();
 	}
 	
 	protected virtual void Start() {
-		Sort(Layers.FromId(gameObject.layer));
+		Sort();
 	}
 
-	public void Move(Vector2 direction) {
-		body.velocity = moveSpeed * direction;
-
+	protected virtual void Update() {
 	}
 
-	public void Move(Layers.LayerType layer) {
-		gameObject.layer = Layers.ToId(layer);
-		Sort(layer);
+	public void MoveLayer(Layers.LayerType layer) {
+		Layer = layer;
+		Sort();
 	}
 
-	private void Sort(Layers.LayerType layer) {
-		spriteRenderer.sortingLayerID = Layers.SortingLayerId(layer);
-		spriteRenderer.sortingOrder = Layers.SortingLayerOrder(type);
+	private void Sort() {
+		entityRenderer.Sort(Layer, Type);
 	}
 }
