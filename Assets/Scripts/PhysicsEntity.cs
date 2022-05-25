@@ -22,7 +22,7 @@ public class PhysicsEntity : Entity {
 		get => isGrounded;
 		set {
 			isGrounded = value;
-			body.gravityScale = value ? 0 : gravityScale;
+			//body.gravityScale = value ? 0 : gravityScale;
 		}
 	}
 
@@ -51,5 +51,9 @@ public class PhysicsEntity : Entity {
 
 	public void MoveY(float yDirection) {
 		body.velocity = new Vector2(body.velocity.x, yDirection * moveSpeed);
+	}
+
+	public void Jump(float force) {
+		body.AddForce(new Vector2(0, force));
 	}
 }
