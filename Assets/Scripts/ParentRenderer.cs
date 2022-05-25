@@ -8,7 +8,7 @@ public class ParentRenderer : BatchRenderer {
 		Initialize();
 	}
 
-	public override IEnumerable<Renderer> GetAllRenderers() {
+	public override IEnumerable<Renderer> AllRenderers() {
 #if UNITY_EDITOR
 		Initialize();
 #endif

@@ -31,10 +31,10 @@ public class SwitchRenderer : BatchRenderer {
 		offRenderer.Visible = true;
 	}
 
-	public override IEnumerable<Renderer> GetAllRenderers() {
-		foreach( var renderer in onRenderer.GetAllRenderers() )
+	public override IEnumerable<Renderer> AllRenderers() {
+		foreach( var renderer in onRenderer.AllRenderers() )
 			yield return renderer;
-		foreach( var renderer in offRenderer.GetAllRenderers() )
+		foreach( var renderer in offRenderer.AllRenderers() )
 			yield return renderer;
 	}
 }

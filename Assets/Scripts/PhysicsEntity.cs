@@ -5,7 +5,9 @@
 public class PhysicsEntity : Entity {
 	private Rigidbody2D body;
 
-	public Collider2D Collision { get; private set; }
+	private float gravityScale;
+
+	public Collider2D Collider { get; private set; }
 
 	[Range(0f, short.MaxValue)]
 	[SerializeField]
@@ -13,17 +15,30 @@ public class PhysicsEntity : Entity {
 
 	public Vector2 Velocity => body.velocity;
 
-	public bool IsGrounded { get; set; } = true;
+	[ReadOnly]
+	[SerializeField]
+	private bool isGrounded = true;
+	public bool IsGrounded {
+		get => isGrounded;
+		set {
+			isGrounded = value;
+			body.gravityScale = value ? 0 : gravityScale;
+		}
+	}
 
 	protected override void Awake() {
 		base.Awake();
 
 		body = GetComponent<Rigidbody2D>();
-		Collision = GetComponent<Collider2D>();
+		Collider = GetComponent<Collider2D>();
+
+		gravityScale = body.gravityScale;
 	}
 
 	protected override void Start() {
 		base.Start();
+
+		IsGrounded = isGrounded;
 	}
 
 	protected override void Update() {

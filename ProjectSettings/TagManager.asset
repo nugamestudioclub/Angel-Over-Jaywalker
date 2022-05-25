@@ -12,10 +12,10 @@ TagManager:
   - Water
   - UI
   - Universal
-  - Background
-  - Miground
-  - Foreground
-  - 
+  - Ground_Floor
+  - Ground_Floor_Interior
+  - 1st_Floor
+  - 1st_Floor_Interior
   - 
   - 
   - 
@@ -41,13 +41,10 @@ TagManager:
   - name: Default
     uniqueID: 0
     locked: 0
-  - name: Background
-    uniqueID: 2121823267
-    locked: 0
-  - name: Midground
+  - name: Ground_Floor
     uniqueID: 633543251
     locked: 0
-  - name: Foreground
+  - name: 1st_Floor
     uniqueID: 673013727
     locked: 0
   - name: Universal

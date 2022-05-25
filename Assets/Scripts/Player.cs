@@ -20,8 +20,15 @@ public class Player : PhysicsEntity {
 			MoveX(Input.GetAxis("Horizontal"));
 			MoveY(Input.GetAxis("Vertical"));
 		}
+		else {
+			MoveX(Velocity.x / 10);
+		}
 
 		if( Input.GetKeyDown(KeyCode.Space) )
 			IsGrounded = !IsGrounded;
+	}
+
+	void OnCollisionEnter2D(Collision2D collision) {
+		Debug.Log($"{gameObject.name} collided with {collision.gameObject.name}");
 	}
 }

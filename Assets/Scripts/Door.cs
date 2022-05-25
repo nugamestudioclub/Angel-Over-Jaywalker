@@ -9,7 +9,7 @@ public class Door : Entity {
 
 	private SwitchRenderer switchRenderer;
 
-	private Collider2D collision;
+	private Collider2D Collider { get; set; }
 
 	[SerializeField]
 	[SerializeProperty(nameof(IsOpen))]
@@ -23,7 +23,7 @@ public class Door : Entity {
 			isOpen = value;
 			entrance.IsOpen = value;
 			exit.IsOpen = value;
-			collision.enabled = !value;
+			Collider.enabled = !value;
 			if( value )
 				switchRenderer.SwitchOn();
 			else
@@ -34,7 +34,7 @@ public class Door : Entity {
 	protected override void Awake() {
 		base.Awake();
 
-		collision = GetComponent<Collider2D>();
+		Collider = GetComponent<Collider2D>();
 	}
 
 	private void Initialize() {

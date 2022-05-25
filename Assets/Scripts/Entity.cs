@@ -2,20 +2,35 @@
 
 [RequireComponent(typeof(BatchRenderer))]
 public class Entity : MonoBehaviour {
-	private BatchRenderer entityRenderer;
+	private BatchRenderer batchRenderer;
 
-	public Layers.LayerType Layer {
-		get => Layers.FromId(gameObject.layer);
-		private set => gameObject.layer = Layers.ToId(value);
+	public Layer Layer {
+		get => Layer.FromId(gameObject.layer);
+		private set => gameObject.layer = Layer.ToId(value);
 	}
 
-	[field: SerializeField]
-	public Layers.EntityType Type { get; private set; }
+	[SerializeField]
+	private SortingOrder sortingOrder;
+
+	public SortingOrder SortingOrder {
+		get => sortingOrder;
+		set {
+			sortingOrder = value;
+#if UNITY_EDITOR
+			Initialize();
+#endif
+			Sort();
+		}
+	}
+
+	private void Initialize() {
+		batchRenderer = GetComponent<BatchRenderer>();
+	}
 
 	protected virtual void Awake() {
-		entityRenderer = GetComponent<BatchRenderer>();
+		Initialize();
 	}
-	
+
 	protected virtual void Start() {
 		Sort();
 	}
@@ -23,12 +38,12 @@ public class Entity : MonoBehaviour {
 	protected virtual void Update() {
 	}
 
-	public void MoveLayer(Layers.LayerType layer) {
+	public void MoveLayer(Layer layer) {
 		Layer = layer;
 		Sort();
 	}
 
 	private void Sort() {
-		entityRenderer.Sort(Layer, Type);
+		batchRenderer.Sort(Layer, SortingOrder);
 	}
 }

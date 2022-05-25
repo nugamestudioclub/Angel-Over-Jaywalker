@@ -8,17 +8,17 @@ public abstract class BatchRenderer : MonoBehaviour {
 		get => visible;
 		set {
 			visible = value;
-			foreach( var renderer in GetAllRenderers() )
+			foreach( var renderer in AllRenderers() )
 				renderer.enabled = value;
 		}
 	}
 
-	public abstract IEnumerable<Renderer> GetAllRenderers();
+	public abstract IEnumerable<Renderer> AllRenderers();
 
-	public void Sort(Layers.LayerType layer, Layers.EntityType entity) {
-		foreach( var renderer in GetAllRenderers() ) {
-			renderer.sortingLayerID = Layers.SortingLayerId(layer);
-			renderer.sortingOrder = Layers.SortingLayerOrder(entity);
+	public void Sort(Layer layer, SortingOrder entity) {
+		foreach( var renderer in AllRenderers() ) {
+			renderer.sortingLayerID = Layer.SortingLayerId(layer);
+			renderer.sortingOrder = Layer.SortingOrderId(entity);
 		}
 	}
 }
