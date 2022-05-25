@@ -14,11 +14,11 @@ TagManager:
   - 
   - Water
   - UI
-  - 
-  - 
-  - 
-  - 
-  - 
+  - Universal
+  - Ground_Floor
+  - Ground_Floor_Interior
+  - 1st_Floor
+  - 1st_Floor_Interior
   - 
   - 
   - 
@@ -43,4 +43,13 @@ TagManager:
   m_SortingLayers:
   - name: Default
     uniqueID: 0
+    locked: 0
+  - name: Ground_Floor
+    uniqueID: 633543251
+    locked: 0
+  - name: 1st_Floor
+    uniqueID: 673013727
+    locked: 0
+  - name: Universal
+    uniqueID: 846566015
     locked: 0
