@@ -35,4 +35,14 @@ public class idleScript : MonoBehaviour
         Debug.Log("slowing down");
         rigidbody2d.velocity = new Vector2(rigidbody2d.velocity.x, rigidbody2d.velocity.y * 2 / 5);
     }
+
+    public void Die()
+    {
+        SceneLoader.LoadCurrentPuzzle();
+    }
+
+    public void Goal()
+    {
+        SceneLoader.LoadNextPuzzle();
+    }
 }
