@@ -89,4 +89,9 @@ public class SceneLoader : MonoBehaviour {
 	public static void LoadNextPuzzle() {
 		LoadPuzzle(++Instance.CurrentPuzzle);
 	}
+
+	public static void QuitGame()
+	{
+		Application.Quit();
+	}
 }
