@@ -17,6 +17,9 @@ TextureImporter:
   - first:
       213: 8666153195878230358
     second: floor_4
+  - first:
+      213: 4633350270274512122
+    second: floor_5
   externalObjects: {}
   serializedVersion: 11
   mipmaps:
@@ -239,10 +242,10 @@ TextureImporter:
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape:
-      - - {x: -16, y: -16}
+      - - {x: 8, y: -16}
         - {x: 16, y: -16}
-        - {x: 16, y: 0}
-        - {x: -16, y: 0}
+        - {x: 16, y: -8}
+        - {x: 8, y: -8}
       tessellationDetail: 0
       bones: []
       spriteID: 20b4d5463a4bb6a10800000000000000
@@ -264,14 +267,39 @@ TextureImporter:
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape:
-      - - {x: -16, y: 16}
-        - {x: -16, y: 0}
-        - {x: 16, y: 0}
-        - {x: 16, y: 16}
+      - - {x: -16, y: -16}
+        - {x: 16, y: -16}
+        - {x: 16, y: -8}
+        - {x: -16, y: -8}
       tessellationDetail: 0
       bones: []
       spriteID: 65920799a6c544870800000000000000
       internalID: 8666153195878230358
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: floor_5
+      rect:
+        serializedVersion: 2
+        x: 64
+        y: 0
+        width: 32
+        height: 32
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape:
+      - - {x: -16, y: -16}
+        - {x: -8, y: -16}
+        - {x: -8, y: -8}
+        - {x: -16, y: -8}
+      tessellationDetail: 0
+      bones: []
+      spriteID: af42ca3b587fc4040800000000000000
+      internalID: 4633350270274512122
       vertices: []
       indices: 
       edges: []
