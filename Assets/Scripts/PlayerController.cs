@@ -1,6 +1,4 @@
 using System;
-using System.Collections;
-using System.Collections.Generic;
 using UnityEngine;
 
 /*
@@ -14,7 +12,7 @@ public class PlayerController : MonoBehaviour
     [SerializeField]
     private float jumpPower = 6;
     [SerializeField]
-    private float moveSpeed = 15;
+    private float moveSpeed = 6;
     private float slowDownRate = 1.1f;
     private Rigidbody2D rigidbody2d;
     private bool isGrounded;
