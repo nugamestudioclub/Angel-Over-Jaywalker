@@ -1,5 +1,3 @@
-using System.Collections;
-using System.Collections.Generic;
 using UnityEngine;
 
 public class GeyserActivator : MonoBehaviour
@@ -7,9 +5,9 @@ public class GeyserActivator : MonoBehaviour
     [SerializeField]
     private float maxHeight;
     private GameObject geyser;
-    private bool waterRising = false;
+    private bool activated = false;
     [SerializeField]
-    private float risingSpeed;
+    private float risingSpeed = .06f;
 
     // Start is called before the first frame update
     void Start()
@@ -20,14 +18,20 @@ public class GeyserActivator : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        if (waterRising && geyser.transform.localScale.y < maxHeight)
+        if (activated && geyser.transform.localScale.y < maxHeight)
         {
             Debug.Log("rising");
             geyser.transform.position += new Vector3(0, risingSpeed / 2, 0);
             geyser.transform.localScale += new Vector3(0, risingSpeed, 0);
-        } else
+        }
+        if (!activated && geyser.transform.localScale.y > Mathf.Epsilon)
         {
-            waterRising = false;
+            Debug.Log("falling");
+            geyser.transform.position += new Vector3(0, -risingSpeed / 2, 0);
+            geyser.transform.localScale += new Vector3(0, -risingSpeed, 0);
+        } else if (!activated)
+        {
+            geyser.GetComponent<Renderer>().enabled = false;
         }
     }
 
@@ -40,10 +44,10 @@ public class GeyserActivator : MonoBehaviour
         }
     }
 
-    public void Activate()
+    private void Activate()
     {
         Debug.Log("activated");
-        waterRising = true;
+        activated = !activated;
         geyser.GetComponent<Renderer>().enabled = true;
     }
 }

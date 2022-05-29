@@ -7,6 +7,11 @@ TagManager:
   - Water
   - IdlePerson
   - GeyserActivator
+  - CraneButton
+  - CranePlatform
+  - CranePlatformBound
+  - CranePlatformXBound
+  - CranePlatformYBound
   layers:
   - Default
   - TransparentFX
