@@ -24,7 +24,7 @@ public class key : MonoBehaviour
         if (collision.gameObject.CompareTag("IdlePerson"))
         {
             door.Open();
-            GetComponent<Renderer>().enabled = false;
+            gameObject.SetActive(false);
         }
     }
 }
