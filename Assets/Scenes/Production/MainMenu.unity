@@ -1013,18 +1013,6 @@ PrefabInstance:
       propertyPath: m_Name
       value: SceneLoader
       objectReference: {fileID: 0}
-    - target: {fileID: 1191242635116626159, guid: 0f0c03ee505f4174db58cdb3c93127fd, type: 3}
-      propertyPath: creditsScene
-      value: Credits
-      objectReference: {fileID: 0}
-    - target: {fileID: 1191242635116626159, guid: 0f0c03ee505f4174db58cdb3c93127fd, type: 3}
-      propertyPath: setCreditsScene
-      value: 
-      objectReference: {fileID: 102900000, guid: a4697ad97b17e11469ba66dd3b9cbc0b, type: 3}
-    - target: {fileID: 1191242635116626159, guid: 0f0c03ee505f4174db58cdb3c93127fd, type: 3}
-      propertyPath: puzzleScenes.Array.size
-      value: 0
-      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 0f0c03ee505f4174db58cdb3c93127fd, type: 3}
 --- !u!1 &1733530564

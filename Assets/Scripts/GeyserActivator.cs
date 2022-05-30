@@ -10,6 +10,8 @@ public class GeyserActivator : MonoBehaviour {
 
 	private SwitchRenderer switchRenderer;
 
+	private AudioSource audioSource;
+
 	private void Awake() {
 		switchRenderer = GetComponent<SwitchRenderer>();
 	}
@@ -20,7 +22,7 @@ public class GeyserActivator : MonoBehaviour {
 
 	void Update() {
 		bool pressed = Input.GetKey(KeyCode.E);
-
+		
 		if( !activated && touched && pressed )
 			Activate();
 		else if( activated && !(touched && pressed) )
@@ -29,7 +31,11 @@ public class GeyserActivator : MonoBehaviour {
 
 	void OnTriggerEnter2D(Collider2D collision) {
 		if( IsPlayer(collision.gameObject) )
+        {
 			touched = true;
+			audioSource.Play();
+		}
+			
 	}
 
 	void OnTriggerExit2D(Collider2D collision) {

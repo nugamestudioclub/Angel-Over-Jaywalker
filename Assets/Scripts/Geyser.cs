@@ -13,6 +13,8 @@ public class Geyser : MonoBehaviour {
 
 	private bool activated;
 
+	private AudioSource audioSource;
+
 	void Awake() {
 		physicsCollider = GetComponentInChildren<BoxCollider2D>();
 		animator = GetComponentInChildren<Animator>();
@@ -24,7 +26,15 @@ public class Geyser : MonoBehaviour {
 	}
 
 	void Update() {
-		if( activated && physicsCollider.size.y < maxHeight )
+		if (activated)
+		{
+			audioSource.Play();
+		}
+		else
+		{
+			audioSource.Pause();
+		}
+		if ( activated && physicsCollider.size.y < maxHeight )
 			Scale(risingSpeed);
 		if( !activated && physicsCollider.size.y > Mathf.Epsilon )
 			Scale(-risingSpeed);

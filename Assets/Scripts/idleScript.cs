@@ -8,6 +8,10 @@ public class idleScript : MonoBehaviour
     [SerializeField]
     private float buoyancy = 3f;
     private Rigidbody2D rigidbody2d;
+    [SerializeField]
+    private AudioClip deathClip;
+    [SerializeField]
+    private AudioClip goalClip;
 
     // Start is called before the first frame update
     void Start()
@@ -38,11 +42,13 @@ public class idleScript : MonoBehaviour
 
     public void Die()
     {
+        SceneLoader.Instance.PlayGlobalClip(deathClip);
         SceneLoader.LoadCurrentPuzzle();
     }
 
     public void Goal()
     {
+        SceneLoader.Instance.PlayGlobalClip(goalClip);
         SceneLoader.LoadNextPuzzle();
     }
 }
