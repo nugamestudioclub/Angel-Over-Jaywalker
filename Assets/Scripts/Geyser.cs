@@ -26,14 +26,6 @@ public class Geyser : MonoBehaviour {
 	}
 
 	void Update() {
-		if (activated)
-		{
-			audioSource.Play();
-		}
-		else
-		{
-			audioSource.Pause();
-		}
 		if ( activated && physicsCollider.size.y < maxHeight )
 			Scale(risingSpeed);
 		if( !activated && physicsCollider.size.y > Mathf.Epsilon )
@@ -76,11 +68,13 @@ public class Geyser : MonoBehaviour {
 
 	public void Activate() {
 		activated = true;
+		audioSource.Play();
 		animator.Play("fire_hydrant_start");
 	}
 
 	public void Deactivate() {
 		activated = false;
+		audioSource.Pause();
 		animator.Play("fire_hydrant_off");
 	}
 }

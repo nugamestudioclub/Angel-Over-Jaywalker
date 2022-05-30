@@ -1,62 +1,76 @@
 using UnityEngine;
 
-public class GeyserActivator : MonoBehaviour {
+public class GeyserActivator : MonoBehaviour
+{
 
-	private Geyser geyser;
+    private Geyser geyser;
 
-	private bool touched;
-	
-	private bool activated;
+    private bool touched;
 
-	private SwitchRenderer switchRenderer;
+    private bool activated;
 
-	private AudioSource audioSource;
+    private SwitchRenderer switchRenderer;
 
-	private void Awake() {
-		switchRenderer = GetComponent<SwitchRenderer>();
-		audioSource = GetComponent<AudioSource>();
-	}
+    private AudioSource audioSource;
 
-	void Start() {
-		geyser = GameObject.Find("Geyser").GetComponent<Geyser>();
-	}
+    private void Awake()
+    {
+        switchRenderer = GetComponent<SwitchRenderer>();
+        audioSource = GetComponent<AudioSource>();
+    }
 
-	void Update() {
-		bool pressed = Input.GetKey(KeyCode.E);
-		
-		if( !activated && touched && pressed )
-			Activate();
-		else if( activated && !(touched && pressed) )
-			Deactivate();
-	}
+    void Start()
+    {
+        geyser = GameObject.Find("Geyser").GetComponent<Geyser>();
+    }
 
-	void OnTriggerEnter2D(Collider2D collision) {
-		if( IsPlayer(collision.gameObject) )
+    void Update()
+    {
+        bool pressed = Input.GetKey(KeyCode.E);
+
+        if (!activated && touched && pressed)
+            Activate();
+        else if (activated && !(touched && pressed))
+            Deactivate();
+    }
+
+    void OnTriggerEnter2D(Collider2D collision)
+    {
+        if (IsPlayer(collision.gameObject))
         {
-			touched = true;
-		}
-			
-	}
+            touched = true;
+        }
 
-	void OnTriggerExit2D(Collider2D collision) {
-		if( IsPlayer(collision.gameObject) )
-			touched = false;
-	}
+    }
 
-	private bool IsPlayer(GameObject obj) {
-		return obj.CompareTag("Player");
-	}
+    void OnTriggerExit2D(Collider2D collision)
+    {
+        if (IsPlayer(collision.gameObject))
+            touched = false;
+    }
 
-	private void Activate() {
-		activated = true;
-		geyser.Activate();
-		audioSource.Play();
-		switchRenderer.SwitchOn();
-	}
+    private bool IsPlayer(GameObject obj)
+    {
+        return obj.CompareTag("Player");
+    }
 
-	private void Deactivate() {
-		activated = false;
-		geyser.Deactivate();
-		switchRenderer.SwitchOff();
-	}
+    private void Activate()
+    {
+        if (!activated)
+        {
+            audioSource.Play();
+        }
+        activated = true;
+
+        geyser.Activate();
+
+        switchRenderer.SwitchOn();
+    }
+
+    private void Deactivate()
+    {
+        activated = false;
+        geyser.Deactivate();
+        switchRenderer.SwitchOff();
+    }
 }
