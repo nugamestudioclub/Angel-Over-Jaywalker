@@ -1,7 +1,6 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
-
 public class tracker : MonoBehaviour {
 	[SerializeField]
 	private GameObject playerObject;
@@ -37,7 +36,7 @@ public class tracker : MonoBehaviour {
 		}
 		else if( x + Camera.main.orthographicSize * 1.8 > horizontalBounds.y ) // if rightmost point is greater than y
 																			   // value of bounds (right bound)...
-	  {
+		{
 			x = horizontalBounds.y - halfWidth; // let x = y value of xBounds
 		}
 
