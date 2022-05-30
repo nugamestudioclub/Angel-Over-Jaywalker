@@ -148,7 +148,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 906cbe40d4ce3fc4fb0714ab24949249, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  maxHeight: 7.5
+  maxHeight: 4
   risingSpeed: 0.06
 --- !u!61 &6902718737992658102
 BoxCollider2D:
