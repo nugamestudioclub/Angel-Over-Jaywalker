@@ -1161,6 +1161,10 @@ PrefabInstance:
       value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 7532951089637108364, guid: 8b0659c458561d243850aa6954e4f264, type: 3}
+      propertyPath: speed
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 7532951089637108364, guid: 8b0659c458561d243850aa6954e4f264, type: 3}
       propertyPath: buoyancy
       value: 3
       objectReference: {fileID: 0}
