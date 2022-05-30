@@ -14,9 +14,10 @@ public enum LayerSubtype {
 
 public enum SortingOrder {
 	Background,
-	Foreground,
+	Scenery,
 	NPC,
 	Player,
+	Foreground,
 	Floor,
 	Collision,
 }

@@ -1,6 +1,4 @@
 using System;
-using System.Collections;
-using System.Collections.Generic;
 using UnityEngine;
 
 /*
@@ -14,51 +12,42 @@ public class PlayerController : MonoBehaviour
     [SerializeField]
     private float jumpPower = 6;
     [SerializeField]
-    private float moveSpeed = 15;
+    private float moveSpeed = 6;
     private float slowDownRate = 1.1f;
     private Rigidbody2D rigidbody2d;
     private bool isGrounded;
     private bool slowingDown;
 
-    // Start is called before the first frame update
-    void Start()
-    {
-        //gets the rigidbody that we will use for moving the player
-        rigidbody2d = GetComponent<Rigidbody2D>();
+    private Animator animator;
+    private SpriteRenderer spriteRenderer;
+	public bool IsBusy { get; set; }
+
+	void Start() {
+		rigidbody2d = GetComponent<Rigidbody2D>();
+        animator = GetComponentInChildren<Animator>();
+        spriteRenderer = GetComponentInChildren<SpriteRenderer>();
         isGrounded = false;
-    }
+		IsBusy = false;
+	}
 
-    // Update is called once per frame
-    void Update()
-    {
-        if (Input.GetKeyDown(KeyCode.Space) && isGrounded) //jump
-        {
-            Jump();
-        }
-        else if (isGrounded)
-        {
-            rigidbody2d.velocity = new Vector2(0, rigidbody2d.velocity.y);
-        }
+	void Update() {
+		if( Input.GetKeyUp(KeyCode.E) )
+			IsBusy = false;
 
-        if (Input.GetKey(KeyCode.A)) //move left
-        {
-            rigidbody2d.velocity = new Vector2(-moveSpeed, rigidbody2d.velocity.y);
-        }
+		if( Input.GetKeyDown(KeyCode.Space) && isGrounded ) {
+			Jump();
+		}
+		else if( isGrounded ) {
+			rigidbody2d.velocity = new Vector2(0, rigidbody2d.velocity.y);
+		}
 
-        if (Input.GetKeyUp(KeyCode.A)) //if stop moving while mid-air, slow down
-        {
+		var input = IsBusy ? Vector2.zero
+			: new Vector2(Input.GetAxis("Horizontal"), Input.GetAxis("Vertical"));
+
+        if (Mathf.Approximately(input.x, 0))
             slowingDown = true;
-        }
-
-        if (Input.GetKey(KeyCode.D)) //move right
-        {
-            rigidbody2d.velocity = new Vector2(moveSpeed, rigidbody2d.velocity.y);
-        }
-
-        if (Input.GetKeyUp(KeyCode.D)) // if stop moving while mid-air, slow down
-        {
-            slowingDown = true;
-        }
+        else
+            rigidbody2d.velocity = new Vector2(input.x * moveSpeed, rigidbody2d.velocity.y);
 
         if (slowingDown)
         {
@@ -67,11 +56,39 @@ public class PlayerController : MonoBehaviour
             {
                 slowingDown = false;
                 rigidbody2d.velocity = new Vector2(0, rigidbody2d.velocity.y);
-            } else
+            }
+            else
             {
                 rigidbody2d.velocity = new Vector2(Math.Sign(xVel) * (Math.Abs(xVel) / slowDownRate), rigidbody2d.velocity.y);
             }
         }
+
+        // this is bad code
+        if (Mathf.Approximately(rigidbody2d.velocity.magnitude, 0))
+            animator.Play("guardian_idle");
+        else
+        {
+            if (!Mathf.Approximately(rigidbody2d.velocity.x, 0)) {
+                float sign = Mathf.Sign(input.x);
+
+                if (sign > 0)
+                {
+                    spriteRenderer.flipX = false;
+                }
+                else
+                {
+                    spriteRenderer.flipX = true;
+                }
+            }
+            if (!isGrounded)
+                animator.Play("guardian_jumping");
+            else
+            {
+
+                animator.Play("guardian_walking");
+            }
+        }
+
     }
 
     /*

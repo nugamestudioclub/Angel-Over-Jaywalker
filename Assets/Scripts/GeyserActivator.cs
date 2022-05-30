@@ -1,49 +1,55 @@
-using System.Collections;
-using System.Collections.Generic;
 using UnityEngine;
 
-public class GeyserActivator : MonoBehaviour
-{
-    [SerializeField]
-    private float maxHeight;
-    private GameObject geyser;
-    private bool waterRising = false;
-    [SerializeField]
-    private float risingSpeed;
+public class GeyserActivator : MonoBehaviour {
 
-    // Start is called before the first frame update
-    void Start()
-    {
-        geyser = GameObject.Find("Geyser");
-    }
+	private Geyser geyser;
 
-    // Update is called once per frame
-    void Update()
-    {
-        if (waterRising && geyser.transform.localScale.y < maxHeight)
-        {
-            Debug.Log("rising");
-            geyser.transform.position += new Vector3(0, risingSpeed / 2, 0);
-            geyser.transform.localScale += new Vector3(0, risingSpeed, 0);
-        } else
-        {
-            waterRising = false;
-        }
-    }
+	private bool touched;
+	
+	private bool activated;
 
-    private void OnTriggerEnter2D(Collider2D collision)
-    {
-        if (collision.gameObject.CompareTag("Player"))
-        {
-            Debug.Log("Activator pressed");
-            Activate();
-        }
-    }
+	private SwitchRenderer switchRenderer;
 
-    public void Activate()
-    {
-        Debug.Log("activated");
-        waterRising = true;
-        geyser.GetComponent<Renderer>().enabled = true;
-    }
+	private void Awake() {
+		switchRenderer = GetComponent<SwitchRenderer>();
+	}
+
+	void Start() {
+		geyser = GameObject.Find("Geyser").GetComponent<Geyser>();
+	}
+
+	void Update() {
+		bool pressed = Input.GetKey(KeyCode.E);
+
+		if( !activated && touched && pressed )
+			Activate();
+		else if( activated && !(touched && pressed) )
+			Deactivate();
+	}
+
+	void OnTriggerEnter2D(Collider2D collision) {
+		if( IsPlayer(collision.gameObject) )
+			touched = true;
+	}
+
+	void OnTriggerExit2D(Collider2D collision) {
+		if( IsPlayer(collision.gameObject) )
+			touched = false;
+	}
+
+	private bool IsPlayer(GameObject obj) {
+		return obj.CompareTag("Player");
+	}
+
+	private void Activate() {
+		activated = true;
+		geyser.Activate();
+		switchRenderer.SwitchOn();
+	}
+
+	private void Deactivate() {
+		activated = false;
+		geyser.Deactivate();
+		switchRenderer.SwitchOff();
+	}
 }
