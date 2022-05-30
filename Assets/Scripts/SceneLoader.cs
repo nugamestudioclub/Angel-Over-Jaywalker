@@ -9,6 +9,8 @@ public class SceneLoader : MonoBehaviour {
 	[ReadOnly]
 	[SerializeField]
 	private string mainMenuScene;
+	[SerializeField]
+	private AudioSource music;
 
 #if UNITY_EDITOR
 	[SerializeField]
@@ -60,10 +62,11 @@ public class SceneLoader : MonoBehaviour {
 	void Awake() {
 		if( Instance == null ) {
 			Instance = this;
+			music.Play();
 			DontDestroyOnLoad(this);
 		}
 		else {
-			Destroy(this);
+			Destroy(gameObject);
 		}
 	}
 
@@ -94,4 +97,10 @@ public class SceneLoader : MonoBehaviour {
 	{
 		Application.Quit();
 	}
+
+	public void PlayGlobalClip(AudioClip clip)
+    {
+		OneShotSound oss = gameObject.AddComponent<OneShotSound>();
+		oss.Play(clip);
+    }
 }
