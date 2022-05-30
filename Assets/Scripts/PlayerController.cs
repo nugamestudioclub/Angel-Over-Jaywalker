@@ -19,14 +19,20 @@ public class PlayerController : MonoBehaviour {
 
 	private Animator animator;
 
+	public bool IsBusy { get; set; }
+
 	void Start() {
 		rigidbody2d = GetComponent<Rigidbody2D>();
 		animator = GetComponentInChildren<Animator>();
 
 		isGrounded = false;
+		IsBusy = false;
 	}
 
 	void Update() {
+		if( Input.GetKeyUp(KeyCode.E) )
+			IsBusy = false;
+
 		if( Input.GetKeyDown(KeyCode.Space) && isGrounded ) {
 			Jump();
 		}
@@ -34,7 +40,8 @@ public class PlayerController : MonoBehaviour {
 			rigidbody2d.velocity = new Vector2(0, rigidbody2d.velocity.y);
 		}
 
-		var input = new Vector2(Input.GetAxis("Horizontal"), Input.GetAxis("Vertical"));
+		var input = IsBusy ? Vector2.zero
+			: new Vector2(Input.GetAxis("Horizontal"), Input.GetAxis("Vertical"));
 
 		if( Mathf.Approximately(input.x, 0) )
 			slowingDown = true;
