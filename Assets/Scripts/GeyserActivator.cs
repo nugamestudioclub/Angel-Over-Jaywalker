@@ -14,6 +14,7 @@ public class GeyserActivator : MonoBehaviour {
 
 	private void Awake() {
 		switchRenderer = GetComponent<SwitchRenderer>();
+		audioSource = GetComponent<AudioSource>();
 	}
 
 	void Start() {
