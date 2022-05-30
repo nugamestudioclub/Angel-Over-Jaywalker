@@ -14621,10 +14621,6 @@ PrefabInstance:
       propertyPath: m_Name
       value: IdlePerson
       objectReference: {fileID: 0}
-    - target: {fileID: 1433856065784834473, guid: 8b0659c458561d243850aa6954e4f264, type: 3}
-      propertyPath: m_TagString
-      value: IdlePerson
-      objectReference: {fileID: 0}
     - target: {fileID: 7303681514354140421, guid: 8b0659c458561d243850aa6954e4f264, type: 3}
       propertyPath: m_RootOrder
       value: 1
@@ -14669,16 +14665,7 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
-    - target: {fileID: 7532951089637108364, guid: 8b0659c458561d243850aa6954e4f264, type: 3}
-      propertyPath: speed
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 7532951089637108364, guid: 8b0659c458561d243850aa6954e4f264, type: 3}
-      propertyPath: buoyancy
-      value: 5
-      objectReference: {fileID: 0}
-    m_RemovedComponents:
-    - {fileID: 3578638197164098971, guid: 8b0659c458561d243850aa6954e4f264, type: 3}
+    m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 8b0659c458561d243850aa6954e4f264, type: 3}
 --- !u!1 &1184524297
 GameObject:
@@ -23721,22 +23708,6 @@ GameObject:
   m_CorrespondingSourceObject: {fileID: 1433856065784834473, guid: 8b0659c458561d243850aa6954e4f264, type: 3}
   m_PrefabInstance: {fileID: 1183239930}
   m_PrefabAsset: {fileID: 0}
---- !u!70 &2070025702
-CapsuleCollider2D:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 2070025699}
-  m_Enabled: 1
-  m_Density: 1
-  m_Material: {fileID: 0}
-  m_IsTrigger: 0
-  m_UsedByEffector: 0
-  m_UsedByComposite: 0
-  m_Offset: {x: 0, y: 0}
-  m_Size: {x: 1, y: 1}
-  m_Direction: 0
 --- !u!1 &2086753652
 GameObject:
   m_ObjectHideFlags: 0
