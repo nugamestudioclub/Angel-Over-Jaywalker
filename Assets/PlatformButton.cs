@@ -10,11 +10,19 @@ public class PlatformButton : MonoBehaviour
     public GameObject RightTarget;
     private bool atLeft = true;
     [SerializeField] float step;
+    [SerializeField]
+    private Sprite pressed;
+    [SerializeField]
+    private Sprite unpressed;
+    private AudioSource audioSource;
+    private SpriteRenderer spriteRennderer;
+    
 
-    // Start is called before the first frame update
-    void Start()
+    void Awake()
     {
         Platform.transform.position = RightTarget.transform.position;
+        audioSource = GetComponent<AudioSource>();
+        spriteRennderer = GetComponent<SpriteRenderer>();
     }
 
     // Update is called once per frame
@@ -32,10 +40,16 @@ public class PlatformButton : MonoBehaviour
         }
     }
 
-    private void OnTriggerExit2D(Collider2D other)
+    private void OnTriggerEnter2D(Collider2D other)
     {
         atLeft = !atLeft;
-        
-        
+
+        audioSource.Play();
+        spriteRennderer.sprite = pressed;
+    }
+
+    private void OnTriggerExit2D(Collider2D collision)
+    {
+        spriteRennderer.sprite = unpressed;
     }
 }

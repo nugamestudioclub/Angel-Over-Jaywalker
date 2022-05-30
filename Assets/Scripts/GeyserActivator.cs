@@ -34,7 +34,6 @@ public class GeyserActivator : MonoBehaviour {
 		if( IsPlayer(collision.gameObject) )
         {
 			touched = true;
-			audioSource.Play();
 		}
 			
 	}
@@ -51,6 +50,7 @@ public class GeyserActivator : MonoBehaviour {
 	private void Activate() {
 		activated = true;
 		geyser.Activate();
+		audioSource.Play();
 		switchRenderer.SwitchOn();
 	}
 
