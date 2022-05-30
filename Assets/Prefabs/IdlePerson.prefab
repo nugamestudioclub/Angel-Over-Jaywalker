@@ -95,6 +95,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   speed: 1
   buoyancy: 3
+  deathClip: {fileID: 8300000, guid: 35d2838b60dc31b48aad552e9c1b1081, type: 3}
+  goalClip: {fileID: 8300000, guid: 19a7a83196e140c4ca2b9ad2324151ab, type: 3}
 --- !u!1 &1900760087990823353
 GameObject:
   m_ObjectHideFlags: 0

@@ -40,11 +40,13 @@ public class craneButton : MonoBehaviour {
 	private bool touched;
 
 	private PlayerController player;
+	private AudioSource audioSource;
 
 	// Start is called before the first frame update
 	void Start() {
 		platform = GameObject.Find("CranePlatform");
 		touched = false;
+		audioSource = GetComponent<AudioSource>();
 	}
 
 	// Update is called once per frame
@@ -58,7 +60,10 @@ public class craneButton : MonoBehaviour {
 			var input = new Vector2(Input.GetAxis("Horizontal"), Input.GetAxis("Vertical"));
 
 			Move(input);
-		}
+		} else
+        {
+			audioSource.Pause();
+        }
 	}
 
 	void OnTriggerEnter2D(Collider2D collision) {
@@ -87,7 +92,11 @@ public class craneButton : MonoBehaviour {
 		Vector3 position = platform.transform.position;
 		Vector3 delta = Vector3.zero;
 
-
+		if (!audioSource.isPlaying)
+        {
+			audioSource.Play();
+		}
+		
 
 		if( direction.x < 0
 			&& position.x - speed > LeftBound )
