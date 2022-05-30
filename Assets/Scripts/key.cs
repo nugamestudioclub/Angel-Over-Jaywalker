@@ -21,10 +21,10 @@ public class key : MonoBehaviour
 
     private void OnTriggerEnter2D(Collider2D collision)
     {
-        if (collision.gameObject.CompareTag("IdlePerson"))
+        if (collision.gameObject.CompareTag("IdlePerson") || collision.gameObject.CompareTag("Player"))
         {
             door.Open();
-            GetComponent<Renderer>().enabled = false;
+            gameObject.SetActive(false);
         }
     }
 }
