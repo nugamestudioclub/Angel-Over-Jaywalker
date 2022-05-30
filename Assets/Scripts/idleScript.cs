@@ -59,7 +59,7 @@ public class idleScript : MonoBehaviour
     public void Goal()
     {
         SceneLoader.Instance.PlayGlobalClip(goalClip);
-        SceneLoader.LoadNextPuzzle();
+        SceneLoader.WinGame();
     }
 
 

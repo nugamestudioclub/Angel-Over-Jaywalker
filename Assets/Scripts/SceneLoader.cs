@@ -42,6 +42,24 @@ public class SceneLoader : MonoBehaviour {
 	}
 #endif
 
+
+	[ReadOnly]
+	[SerializeField]
+	private string winScene;
+
+#if UNITY_EDITOR
+	[SerializeField]
+	[SerializeProperty(nameof(SetWinScene))]
+	private SceneAsset setWinScene;
+	public SceneAsset SetWinScene {
+		get => setWinScene;
+		set {
+			setWinScene = value;
+			winScene = value.name;
+		}
+	}
+#endif
+
 	[SerializeField]
 	private List<string> puzzleScenes;
 
@@ -91,6 +109,10 @@ public class SceneLoader : MonoBehaviour {
 
 	public static void LoadNextPuzzle() {
 		LoadPuzzle(++Instance.CurrentPuzzle);
+	}
+
+	public static void WinGame() {
+		SceneManager.LoadScene(Instance.winScene);
 	}
 
 	public static void QuitGame()
