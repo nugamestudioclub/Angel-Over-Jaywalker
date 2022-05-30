@@ -34,25 +34,12 @@ public class PlayerController : MonoBehaviour {
 			rigidbody2d.velocity = new Vector2(0, rigidbody2d.velocity.y);
 		}
 
-		if( Input.GetKey(KeyCode.A) ) //move left
-		{
-			rigidbody2d.velocity = new Vector2(-moveSpeed, rigidbody2d.velocity.y);
-		}
+		var input = new Vector2(Input.GetAxis("Horizontal"), Input.GetAxis("Vertical"));
 
-		if( Input.GetKeyUp(KeyCode.A) ) //if stop moving while mid-air, slow down
-		{
+		if( Mathf.Approximately(input.x, 0) )
 			slowingDown = true;
-		}
-
-		if( Input.GetKey(KeyCode.D) ) //move right
-		{
-			rigidbody2d.velocity = new Vector2(moveSpeed, rigidbody2d.velocity.y);
-		}
-
-		if( Input.GetKeyUp(KeyCode.D) ) // if stop moving while mid-air, slow down
-		{
-			slowingDown = true;
-		}
+		else
+			rigidbody2d.velocity = new Vector2(input.x * moveSpeed, rigidbody2d.velocity.y);
 
 		if( slowingDown ) {
 			float xVel = rigidbody2d.velocity.x;

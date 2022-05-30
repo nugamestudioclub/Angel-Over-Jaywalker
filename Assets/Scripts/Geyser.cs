@@ -44,14 +44,8 @@ public class Geyser : MonoBehaviour {
 	}
 
 	void OnTriggerStay2D(Collider2D collision) {
-		Debug.Log($"{collision.gameObject.name} triggered");
-
 		// if the idle player stays collided with the geyser and the geyser is enabled...
 		if( activated && collision.gameObject.CompareTag("IdlePerson") ) {
-
-			Debug.Log("idle person is here");
-
-
 			idleScript person = collision.GetComponent<idleScript>();
 
 			// calculates the depth of the idle player
