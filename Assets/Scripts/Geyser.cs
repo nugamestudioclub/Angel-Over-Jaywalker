@@ -18,7 +18,7 @@ public class Geyser : MonoBehaviour {
 	void Awake() {
 		physicsCollider = GetComponentInChildren<BoxCollider2D>();
 		animator = GetComponentInChildren<Animator>();
-		
+		audioSource = GetComponentInChildren<AudioSource>();
 	}
 
 	void Start() {

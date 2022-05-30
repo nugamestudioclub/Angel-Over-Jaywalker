@@ -13,15 +13,25 @@ public class idleScript : MonoBehaviour
     [SerializeField]
     private AudioClip goalClip;
 
+    private ColliderController colliderController;
+    private SpriteRenderer spriteRenderer;
     // Start is called before the first frame update
-    void Start()
+    void Awake()
     {
         rigidbody2d = GetComponent<Rigidbody2D>();
+        spriteRenderer = GetComponentInChildren<SpriteRenderer>();
+        colliderController = GetComponentInChildren<ColliderController>();
     }
 
     // Update is called once per frame
     void Update()
     {
+        if (colliderController.isColliding) //stuck
+        {
+            speed = -speed;
+            spriteRenderer.flipX = !spriteRenderer.flipX;
+        }
+
         rigidbody2d.velocity = new Vector2(speed, rigidbody2d.velocity.y);
     }
 
@@ -51,4 +61,6 @@ public class idleScript : MonoBehaviour
         SceneLoader.Instance.PlayGlobalClip(goalClip);
         SceneLoader.LoadNextPuzzle();
     }
+
+
 }
