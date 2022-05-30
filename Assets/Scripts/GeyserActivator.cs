@@ -2,7 +2,7 @@ using UnityEngine;
 
 public class GeyserActivator : MonoBehaviour
 {
-
+    [SerializeField]
     private Geyser geyser;
 
     private bool touched;
@@ -13,15 +13,11 @@ public class GeyserActivator : MonoBehaviour
 
     private AudioSource audioSource;
 
+
     private void Awake()
     {
         switchRenderer = GetComponent<SwitchRenderer>();
         audioSource = GetComponent<AudioSource>();
-    }
-
-    void Start()
-    {
-        geyser = GameObject.Find("Geyser").GetComponent<Geyser>();
     }
 
     void Update()
