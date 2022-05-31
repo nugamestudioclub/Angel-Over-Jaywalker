@@ -1,8 +1,9 @@
 ﻿using System.Collections.Generic;
+using System.Linq;
 using UnityEngine;
 
 public class ParentRenderer : BatchRenderer {
-	private List<Renderer> renderers = new List<Renderer> ();
+	private readonly List<Renderer> renderers = new List<Renderer>();
 
 	void Awake() {
 		Initialize();

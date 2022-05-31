@@ -34,12 +34,13 @@ public class Door : Entity {
 	protected override void Awake() {
 		base.Awake();
 
-		Collider = GetComponent<Collider2D>();
+		Initialize();
 	}
 
 	private void Initialize() {
 		entrance = GetComponentInChildren<Entrance>();
 		exit = GetComponentInChildren<Exit>();
+		Collider = GetComponent<Collider2D>();
 		switchRenderer = GetComponent<SwitchRenderer>();
 	}
 

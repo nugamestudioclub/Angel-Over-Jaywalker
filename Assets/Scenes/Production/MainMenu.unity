@@ -1022,6 +1022,10 @@ PrefabInstance:
       value: WinGame
       objectReference: {fileID: 0}
     - target: {fileID: 1191242635116626159, guid: 0f0c03ee505f4174db58cdb3c93127fd, type: 3}
+      propertyPath: setWinScene
+      value: 
+      objectReference: {fileID: 102900000, guid: 5e9a3147645308c499a85ea0ef442052, type: 3}
+    - target: {fileID: 1191242635116626159, guid: 0f0c03ee505f4174db58cdb3c93127fd, type: 3}
       propertyPath: puzzleScenes.Array.size
       value: 1
       objectReference: {fileID: 0}

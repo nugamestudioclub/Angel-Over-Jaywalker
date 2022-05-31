@@ -1,8 +1,8 @@
 ﻿
 using UnityEngine;
 
-public class EditorSorter : MonoBehaviour {
 #if UNITY_EDITOR
+public class EditorSorter : MonoBehaviour {
 	[SerializeField]
 	[SerializeProperty(nameof(LayerType))]
 	private LayerType layerType;
@@ -63,5 +63,5 @@ public class EditorSorter : MonoBehaviour {
 		if( TryGetComponent(out Renderer renderer) )
 			renderer.sortingOrder = Layer.SortingOrderId(sortingOrder);
 	}
-#endif
 }
+#endif

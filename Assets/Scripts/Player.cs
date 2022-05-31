@@ -1,5 +1,3 @@
-using System.Collections;
-using System.Collections.Generic;
 using UnityEngine;
 
 public class Player : PhysicsEntity {
@@ -36,6 +34,5 @@ public class Player : PhysicsEntity {
 	}
 
 	void OnCollisionEnter2D(Collision2D collision) {
-		Debug.Log($"{gameObject.name} collided with {collision.gameObject.name}");
 	}
 }

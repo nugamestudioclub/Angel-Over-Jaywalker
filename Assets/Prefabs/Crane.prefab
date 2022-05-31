@@ -767,7 +767,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 11eb07b32ec48a14483148879e366bc9, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  speed: 0.025
+  speed: 0.01
   leftBound: {fileID: 3465209079034419969}
   rightBound: {fileID: 3465209079834796861}
   upperBound: {fileID: 3465209078134897374}
@@ -811,8 +811,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   isOn: 0
-  onRenderer: {fileID: 0}
-  offRenderer: {fileID: 0}
+  onRenderer: {fileID: 8965575132990311024}
+  offRenderer: {fileID: 2527111912772497020}
 --- !u!82 &4191929778030385969
 AudioSource:
   m_ObjectHideFlags: 0

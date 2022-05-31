@@ -37,7 +37,6 @@ public class idleScript : MonoBehaviour
 
     public void Float(float depth)
     {
-        Debug.Log("Floating");
         // adds upwards force to the idle player based on water depth
         float upwardsForce = (9.81f + depth) * buoyancy;
         rigidbody2d.AddForce(new Vector2(0, upwardsForce));
@@ -45,7 +44,6 @@ public class idleScript : MonoBehaviour
 
     public void SlowDown()
     {
-        Debug.Log("slowing down");
         // slows speed of idle player once exiting water
         rigidbody2d.velocity = new Vector2(rigidbody2d.velocity.x, rigidbody2d.velocity.y * 2 / 5);
     }

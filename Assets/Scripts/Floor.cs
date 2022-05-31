@@ -1,5 +1,3 @@
-using System.Collections;
-using System.Collections.Generic;
 using UnityEngine;
 
 public class Floor : MonoBehaviour {
@@ -14,7 +12,6 @@ public class Floor : MonoBehaviour {
 	}
 
 	void OnTriggerEnter2D(Collider2D collider) {
-		Debug.Log(collider.gameObject.name + " is entering...");
 		if( collider.TryGetComponent(out PhysicsEntity entity)
 			&& entity.Layer.type != Layer.type ) {
 			entity.IsGrounded = true;
@@ -24,7 +21,6 @@ public class Floor : MonoBehaviour {
 	}
 
 	void OnTriggerExit2D(Collider2D collider) {
-		Debug.Log(collider.gameObject.name + " is exiting...");
 		if( collider.TryGetComponent(out PhysicsEntity entity) )
 			entity.IsGrounded = false;
 	}

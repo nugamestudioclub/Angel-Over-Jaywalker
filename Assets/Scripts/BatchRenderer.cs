@@ -9,7 +9,7 @@ public abstract class BatchRenderer : MonoBehaviour {
 		set {
 			visible = value;
 			foreach( var renderer in AllRenderers() )
-				renderer.enabled = value;
+				renderer.enabled = value; 
 		}
 	}
 
